@@ -26,7 +26,6 @@ script:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push YOUR_DOCKER_HUB/simple-node
   - docker push zenithcoder/udagram-api-feed
   - docker push zenithcoder/udagram-api-user
   - docker push zenithcoder/udagram-reverseproxy
